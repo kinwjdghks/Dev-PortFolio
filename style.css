@@ -1,0 +1,477 @@
+
+
+body {
+  /* overflow: hidden scroll; */
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  padding:0;
+}
+
+.pages {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#between12{
+  width: 100vw;
+  height: 20vh;
+  background: linear-gradient(to bottom,rgb(231, 231, 231),rgb(213, 242, 255) );
+}
+
+#page1 {
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+#page2 {
+  background-color: rgb(213, 242, 255);
+  justify-content: center;
+  height: 310vh;
+  z-index:2;
+}
+
+#page3 {
+  position: relative;
+  background-color: rgb(32, 32, 32);
+  justify-content: center;
+  align-items: center;
+}
+#page4 {
+  position: relative;
+  background-color: white;
+  height: 60vh;
+  justify-content: right;
+}
+
+.container-sidebar{
+
+  height: 100vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.container-sidebar.right{
+  align-items: end;
+}
+
+.container-namediv{
+  height: 100vh;
+  width: 40vw;
+}
+
+.container-text.univ, .container-text.team{
+  height: 7rem;
+  width: 10rem;
+  position: relative;
+  margin:3rem;
+}
+.emptytag.open{
+  position: absolute;
+  top:0;
+  left:0;
+
+}
+.emptytag.close{
+  position: absolute;
+  top: 5rem;
+  left:7rem;
+
+}
+.container-text.univ p{
+  position: absolute;
+  width: 10rem;
+  top: 2.4rem;
+  left:0.5rem;
+  opacity: 0; 
+  animation: floatappear 2s ease-out 7s forwards;
+}
+.container-text.team p{
+  position: absolute;
+  width: 10rem;
+  top: 2.4rem;
+  left:0.5rem;
+  opacity: 0; 
+  animation: floatappear 2s ease-out 7s forwards;
+}
+
+.namediv_content{
+  margin-top: 40vh;
+  position: relative;
+  width: inherit;
+  height: 20vh;
+  font-size: 25px;
+}
+.divtag_frontend{
+  position: absolute;
+  left: 8rem;
+  opacity: 0;
+  animation: floatappear 2s ease-out 0.5s forwards;
+}
+.textbox_name{
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  margin: 0.5rem;
+  margin-left:10rem;
+  word-wrap: normal;
+}
+/*커서 깜빡이는 효과*/
+.textbox_name::after{
+  content: "";
+  margin-left: .4rem;
+  animation: cursor .9s infinite 3s steps(2);
+}
+
+.divtag_developer{
+  position: absolute;
+  top: 90px;
+  margin-left:15rem;
+  opacity: 0;
+  animation: floatappear 2s ease-out 1.5s forwards;
+}
+
+
+
+/*상단바 전체*/
+.topbar {
+  width: 100vw;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid black;
+  background-color: white;
+  z-index: 100;
+}
+/*햄버거 버튼*/
+.nav-toggle {
+  margin-left: 1vw;
+  margin-top: 2.5vh;
+  position: relative;
+  background-color: white;
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  float: left;
+  border: none;
+}
+.icon-bar {
+  display: block;
+  width: 2.5vw;
+  height: 2px;
+  margin-top: 5px;
+  border-radius: 1px;
+  background-color: black;
+}
+
+/*상단바 메뉴*/
+.topbar nav ul {
+  margin-top: 2.5vh;
+  padding-right: 5%;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+#progress-circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  clip-path: inset(0 0 50% 0);
+  top: 56px;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.topbar nav li {
+  width: 140px;
+  text-align: center;
+}
+/*page 2*/
+.works-container {
+  margin-top: 5vh;
+  width: 85vw;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  flex-wrap: wrap;
+  z-index: 5;
+}
+.block.works {
+  position: relative;
+  margin-bottom: 7vh;
+  overflow: hidden;
+}
+
+.block.works.paulkim {
+  margin-top: 15vh;
+  width: 35vw;
+  height: 35vw;
+}
+
+.block.works.freshman {
+  width: 40vw;
+  margin-top: 25vh;
+  /* margin-bottom: 40vh; */
+  height: 100vh;
+}
+.block.works.frenchdispatch {
+  width: 45vw;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  height: 110vh;
+}
+.block.works.jungsinsa {
+  margin-top: 10vh;
+  margin-left: 5vw;
+  width: 35vw;
+  height: 80vh;
+}
+.works.textbox-reserve{
+  width: 30vw;
+  height: 20vw;
+}
+.works.textbox-container {
+  width: 30vw;
+  height: 0;
+  max-height: 20vw;
+  background-color: rgb(235, 247, 253);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.works.textbox {
+  margin-top: 1vw;
+  width: 28vw;
+  height: 19vw;
+  flex-wrap: wrap;
+  font-size: 25px;
+
+  font-family:sans-serif;
+  z-index:5;
+}
+.works.textbox-reserve.frenchdispatch {
+  margin-left: 10vw;
+}
+
+.works.textbox-reserve.freshman {
+  margin-top: 10vh;
+  margin-left: 15vw;
+}
+.works.textbox-reserve.jungsinsa {
+  margin-left: 10vw;
+}
+
+.img.works {
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
+  transition: all 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.works.description-container {
+  position: absolute;
+  width: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 3;
+}
+
+.works.description.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 0;
+}
+.works.description.sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/*page 3*/
+.title-stacks{
+  position: absolute;
+  top:-39px;
+  left: 3vw;
+  color: rgb(78, 78, 78);
+  font-size: 100px;
+  font-family: 'Poppins';
+  font-weight: bolder;
+  z-index: 1;
+}
+.stacks-container {
+  position: relative;
+  width: 45rem;
+  height: 45rem;
+  background-color: rgb(32,32,32);
+  border-radius: 3rem;
+}
+
+.imgcontainer-reserve{
+  position: absolute;
+  top: 5%;
+  left: 28%;
+  display: flex;
+  justify-content: center;
+  overflow: none;
+  width: 20rem;
+  height: 18rem;
+  transform-origin: center bottom;
+}
+.imgcontainer-reserve.c{
+  animation: spin reverse linear 50s infinite; 
+}
+.imgcontainer-reserve.html{
+  animation: spin_html reverse linear 50s infinite; 
+}
+.imgcontainer-reserve.css{
+  animation: spin_css reverse linear 50s infinite; 
+}
+.imgcontainer-reserve.java{
+  animation: spin_java reverse linear 50s infinite; 
+}
+.imgcontainer-reserve.react{
+  animation: spin_react reverse linear 50s infinite; 
+}
+.imgcontainer-reserve.ps{
+  animation: spin_ps reverse linear 50s infinite; 
+}
+.imgcontainer-reserve_push{
+  transform-origin: center bottom;
+}
+
+.imgcontainer_zoom{
+  width: 8rem;
+  height: 8rem;
+}
+.imgcontainer.stacks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+  border: 0.3rem solid white;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3rem;
+  overflow: hidden;
+  animation: spin linear 20s infinite;
+}
+
+.imgcontainer.stacks.react{
+  background-color: black;
+}
+.imgcontainer.stacks.ps{
+  background-color: black;
+}
+
+.img.stacks {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  
+}
+.img.stacks.c {
+  object-fit: contain;
+  animation: spin reverse linear 33.3s infinite;
+}
+.img.stacks.html {
+  animation: spin_ps reverse linear 33.3s infinite;
+}
+.img.stacks.css {
+  animation: spin_react reverse linear 33.3s infinite;
+}
+.img.stacks.java {
+  animation: spin_java reverse linear 33.3s infinite;
+}
+.img.stacks.react {
+  animation: spin_css reverse linear 33.3s infinite;
+}
+.img.stacks.ps {
+  animation: spin_html reverse linear 33.3s infinite;
+}
+
+
+.phone_string{
+  position: absolute;
+  top:0;
+  left:7.5rem;
+  border-right: 3px solid black;
+  height: 15.1rem;
+}
+.imgcontainer.phone{
+  position: absolute;
+  top:15rem;
+  left: 6.5rem;
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(120deg);
+} 
+.imgcontainer.contact {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  object-fit: contain;
+  overflow: hidden;
+}
+.img.contact {
+  width: 3rem;
+  height: 3rem;
+}
+
+.img.contact.insta {
+  transform: scale(1.2);
+}
+.img.contact.email {
+  transform: scale(1.2);
+}
+.contacts-container {
+  margin-top: 10vh;
+  margin-right: 10vw;
+}
+.block.contact {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin-top: 20px;
+  display: flex;
+  align-self: center;
+}
+
+.content.contact {
+  width: 13rem;
+  text-align: right;
+  margin-left: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: larger;
+  
+}
+.link{
+  text-decoration:none;
+  color: black;
+  
+}
+.content.contact.insta, .content.contact.git{
+  transform-origin: 80% 50%;
+  animation: wiggle 1s infinite;
+}
+
