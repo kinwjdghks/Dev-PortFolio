@@ -58,7 +58,7 @@ const moveProgressCircle = () => {
   const clientHeight = document.querySelector("html").clientHeight;
 
   let progress = scrollTop / (scrollHeight - clientHeight);
-  console.log(progress);
+  // console.log(progress);
   const polynomial = (x) => {
     return 3.863 * Math.pow(x, 3) - 5.286 * Math.pow(x, 2) + 2.423 * x;
   };
@@ -176,3 +176,24 @@ for (var i = 0; i < 6; i++) {
     right.classList.add("pushedclockwise_Rev");
   });
 }
+
+//전화기 흔들리는 애니메이션
+const phone = document.getElementsByClassName('container_phone')[0];
+phone.addEventListener("mouseover",()=>{
+  let i=0;
+  if(phone.classList.contains("swing")){
+    return;
+  }
+  
+  const interval = setInterval(()=>{
+    if(i===0){
+      phone.classList.add("swing");
+      i++;
+    }
+    else{
+      phone.classList.remove("swing");
+      clearInterval(interval);
+    }
+  },3000);
+})
+

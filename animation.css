@@ -167,3 +167,20 @@
   100% {transform: rotate(0deg);}
 }
 
+.swing{
+  animation: swing 3s ease-out;
+}
+@keyframes swing {
+  0%{ transform: rotate(0deg);
+  }
+  20%{ transform: rotate(40deg);
+  }
+  40%{ transform: rotate(-30deg);
+  }
+  60%{ transform: rotate(20deg);
+  }
+  80%{ transform: rotate(-10deg);
+  }
+  100%{transform: rotate(0deg);}
+
+}

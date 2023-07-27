@@ -40,7 +40,7 @@ body {
   align-items: center;
 }
 #page4 {
-  position: relative;
+  /* position: relative; */
   background-color: white;
   height: 60vh;
   justify-content: right;
@@ -260,7 +260,7 @@ body {
   flex-wrap: wrap;
   font-size: 25px;
 
-  font-family:sans-serif;
+  font-family:'hanam', sans-serif;
   z-index:5;
 }
 .works.textbox-reserve.frenchdispatch {
@@ -409,18 +409,24 @@ body {
   animation: spin_html reverse linear 33.3s infinite;
 }
 
-
+.container_phone{
+  position: relative;
+  width: 3rem;
+  height: 20rem;
+  margin-right: 40rem;
+  transform-origin: center top;
+}
 .phone_string{
   position: absolute;
   top:0;
-  left:7.5rem;
+  left:1rem;
   border-right: 3px solid black;
   height: 15.1rem;
 }
 .imgcontainer.phone{
   position: absolute;
   top:15rem;
-  left: 6.5rem;
+  left:0;
   width: 3rem;
   height: 3rem;
   transform: rotate(120deg);
