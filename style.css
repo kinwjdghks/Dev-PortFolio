@@ -1,11 +1,7 @@
 
-
 body {
-  /* overflow: hidden scroll; */
   display: flex;
   flex-direction: column;
-  margin:0;
-  padding:0;
 }
 
 .pages {
@@ -13,6 +9,7 @@ body {
   height: 100vh;
   display: flex;
 }
+
 
 #between12{
   width: 100vw;
@@ -23,33 +20,34 @@ body {
 #page1 {
   background-color: rgb(231, 231, 231);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
 }
 #page2 {
   background-color: rgb(213, 242, 255);
+  display: flex;
   justify-content: center;
-  height: 310vh;
-  z-index:2;
+  height: auto;
+
 }
 
 #page3 {
-  position: relative;
+  height: 70vh;
   background-color: rgb(32, 32, 32);
+  position: relative;
   justify-content: center;
-  align-items: center;
+  
 }
 #page4 {
-  /* position: relative; */
   background-color: white;
   height: 60vh;
   justify-content: right;
 }
 
 .container-sidebar{
-
-  height: 100vh;
-  width: 30vw;
+  height: 30vh;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -59,15 +57,57 @@ body {
 }
 
 .container-namediv{
-  height: 100vh;
-  width: 40vw;
+  height: 70vh;
+  width: 100vw;
+  align-content: center;
+}
+.namediv_content{
+  margin: 0 auto;
+  margin-top: 30vh;
+  
+  height: 30%;
+  font-size: 160%;
+}
+.divtag_frontend_align{
+  /* position: relative; */
+  display: flex;
+  justify-content: right;
+  width: 50%;
+  height: 1.6em;
+}
+.divtag_developer_align{
+  margin-left: 50vw;
+  width: 50%;
+  height: 1.6em;
+}
+
+.textbox_name_align{
+  position: relative;
+  width: 100%;
+  height: 1.8em;
+  word-wrap: normal;
+}
+.divtag_frontend{
+  margin-right: 5vw;
+  opacity: 0;
+  animation: floatappear 2s ease-out 0.5s forwards;
+}
+.textbox_name{
+  width: fit-content;
+  margin: 0 auto;
+}
+.divtag_developer{
+  margin-left: 3vw;
+  opacity: 0;
+  animation: floatappear 2s ease-out 1.5s forwards;
 }
 
 .container-text.univ, .container-text.team{
+  font-size: 110%;
   height: 7rem;
   width: 10rem;
   position: relative;
-  margin:3rem;
+  margin:5vw;
 }
 .emptytag.open{
   position: absolute;
@@ -78,7 +118,7 @@ body {
 .emptytag.close{
   position: absolute;
   top: 5rem;
-  left:7rem;
+  left:7.5rem;
 
 }
 .container-text.univ p{
@@ -87,7 +127,8 @@ body {
   top: 2.4rem;
   left:0.5rem;
   opacity: 0; 
-  animation: floatappear 2s ease-out 7s forwards;
+  animation: floatappear 2s ease-out 7s forwards; 
+
 }
 .container-text.team p{
   position: absolute;
@@ -98,86 +139,46 @@ body {
   animation: floatappear 2s ease-out 7s forwards;
 }
 
-.namediv_content{
-  margin-top: 40vh;
-  position: relative;
-  width: inherit;
-  height: 20vh;
-  font-size: 25px;
-}
-.divtag_frontend{
-  position: absolute;
-  left: 8rem;
-  opacity: 0;
-  animation: floatappear 2s ease-out 0.5s forwards;
-}
-.textbox_name{
-  position: absolute;
-  width: 100%;
-  top: 35px;
-  margin: 0.5rem;
-  margin-left:10rem;
-  word-wrap: normal;
-}
+
 /*커서 깜빡이는 효과*/
 .textbox_name::after{
   content: "";
   margin-left: .4rem;
+  border: 1.5px solid black;
+  opacity: 0;
   animation: cursor .9s infinite 3s steps(2);
 }
 
-.divtag_developer{
-  position: absolute;
-  top: 90px;
-  margin-left:15rem;
-  opacity: 0;
-  animation: floatappear 2s ease-out 1.5s forwards;
-}
-
-
 
 /*상단바 전체*/
+
 .topbar {
-  width: 100vw;
-  height: 76px;
+  /* width: 100vw;
+  height: 4.5rem;
   position: fixed;
   top: 0;
   left: 0;
   border-bottom: 2px solid black;
   background-color: white;
-  z-index: 100;
-}
-/*햄버거 버튼*/
-.nav-toggle {
-  margin-left: 1vw;
-  margin-top: 2.5vh;
-  position: relative;
-  background-color: white;
-  border-radius: 4px;
-  padding-top: 6px;
-  padding-bottom: 10px;
-  float: left;
-  border: none;
-}
-.icon-bar {
-  display: block;
-  width: 2.5vw;
-  height: 2px;
-  margin-top: 5px;
-  border-radius: 1px;
-  background-color: black;
+  z-index: 100; */
+  display: none;
 }
 
+
 /*상단바 메뉴*/
+/*
 .topbar nav ul {
-  margin-top: 2.5vh;
-  padding-right: 5%;
+  width: 100vw;
+  margin-top: 1.6rem;
   list-style: none;
   font-family: "Poppins", sans-serif;
-  font-size: 23px;
+  font-size: 1.3rem;
   display: flex;
-  justify-content: right;
   align-items: center;
+}
+.topbar nav ul li{
+  width: 25vw;
+  text-align: center;
 }
 #progress-circle {
   position: absolute;
@@ -186,7 +187,7 @@ body {
   border-radius: 20px;
   background-color: black;
   clip-path: inset(0 0 50% 0);
-  top: 56px;
+  top: 3.3rem;
 }
 
 .topbar nav a {
@@ -194,86 +195,24 @@ body {
   color: black;
   display: block;
 }
-
-.topbar nav li {
-  width: 140px;
-  text-align: center;
-}
+*/
 /*page 2*/
 .works-container {
   margin-top: 5vh;
-  width: 85vw;
-  height: inherit;
+  width: 80vw;
   display: flex;
   flex-direction: column;
-  align-content: space-between;
-  flex-wrap: wrap;
+  align-content: space-around;
   z-index: 5;
+  flex-wrap: nowrap;
 }
 .block.works {
+  width: inherit;
   position: relative;
   margin-bottom: 7vh;
   overflow: hidden;
 }
 
-.block.works.paulkim {
-  margin-top: 15vh;
-  width: 35vw;
-  height: 35vw;
-}
-
-.block.works.freshman {
-  width: 40vw;
-  margin-top: 25vh;
-  /* margin-bottom: 40vh; */
-  height: 100vh;
-}
-.block.works.frenchdispatch {
-  width: 45vw;
-  margin-top: 5vh;
-  margin-left: 5vw;
-  height: 110vh;
-}
-.block.works.jungsinsa {
-  margin-top: 10vh;
-  margin-left: 5vw;
-  width: 35vw;
-  height: 80vh;
-}
-.works.textbox-reserve{
-  width: 30vw;
-  height: 20vw;
-}
-.works.textbox-container {
-  width: 30vw;
-  height: 0;
-  max-height: 20vw;
-  background-color: rgb(235, 247, 253);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-}
-.works.textbox {
-  margin-top: 1vw;
-  width: 28vw;
-  height: 19vw;
-  flex-wrap: wrap;
-  font-size: 25px;
-
-  font-family:'hanam', sans-serif;
-  z-index:5;
-}
-.works.textbox-reserve.frenchdispatch {
-  margin-left: 10vw;
-}
-
-.works.textbox-reserve.freshman {
-  margin-top: 10vh;
-  margin-left: 15vw;
-}
-.works.textbox-reserve.jungsinsa {
-  margin-left: 10vw;
-}
 
 .img.works {
   width: inherit;
@@ -309,32 +248,27 @@ body {
 
 /*page 3*/
 .title-stacks{
-  position: absolute;
-  top:-39px;
-  left: 3vw;
   color: rgb(78, 78, 78);
-  font-size: 100px;
+  font-size: 250%;
   font-family: 'Poppins';
   font-weight: bolder;
-  z-index: 1;
 }
 .stacks-container {
   position: relative;
-  width: 45rem;
-  height: 45rem;
+  width: 100vw;
+  height: 100vw;
   background-color: rgb(32,32,32);
-  border-radius: 3rem;
 }
 
 .imgcontainer-reserve{
   position: absolute;
-  top: 5%;
-  left: 28%;
+  /* top: 5%; */
+  left: 45vw;
   display: flex;
   justify-content: center;
   overflow: none;
-  width: 20rem;
-  height: 18rem;
+  width: 10vw;
+  height: 43vw;
   transform-origin: center bottom;
 }
 .imgcontainer-reserve.c{
@@ -360,18 +294,18 @@ body {
 }
 
 .imgcontainer_zoom{
-  width: 8rem;
-  height: 8rem;
+  width: 10vw;
+  height: 10vw;
 }
 .imgcontainer.stacks{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8rem;
-  height: 8rem;
+  width: 18vw;
+  height: 18vw;
   border: 0.3rem solid white;
   background-color: rgb(255, 255, 255);
-  border-radius: 3rem;
+  border-radius: 5vw;
   overflow: hidden;
   animation: spin linear 20s infinite;
 }
@@ -384,8 +318,8 @@ body {
 }
 
 .img.stacks {
-  width: 7rem;
-  height: 7rem;
+  width: 17vw;
+  height: 17vw;
   object-fit: cover;
   
 }
@@ -409,6 +343,7 @@ body {
   animation: spin_html reverse linear 33.3s infinite;
 }
 
+/*page 4*/
 .container_phone{
   position: relative;
   width: 3rem;
@@ -423,6 +358,8 @@ body {
   border-right: 3px solid black;
   height: 15.1rem;
 }
+
+
 .imgcontainer.phone{
   position: absolute;
   top:15rem;
@@ -432,15 +369,15 @@ body {
   transform: rotate(120deg);
 } 
 .imgcontainer.contact {
-  width: 3rem;
-  height: 3rem;
+  width: 10vw;
+  height: 10vw;
   border-radius: 1rem;
   object-fit: contain;
   overflow: hidden;
 }
 .img.contact {
-  width: 3rem;
-  height: 3rem;
+  width: 9vw;
+  height: 9vw;
 }
 
 .img.contact.insta {
@@ -450,27 +387,27 @@ body {
   transform: scale(1.2);
 }
 .contacts-container {
-  margin-top: 10vh;
-  margin-right: 10vw;
+  margin-top: 20vw;
+  margin-right: 5vw;
+
 }
 .block.contact {
   display: flex;
   align-items: center;
+  justify-content: right;
   height: 3rem;
   margin-top: 20px;
-  display: flex;
-  align-self: center;
+  
 }
 
 .content.contact {
-  width: 13rem;
+  width: 40vw;
   text-align: right;
-  margin-left: 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: larger;
-  
+  font-size: 1rem;
 }
+
 .link{
   text-decoration:none;
   color: black;
@@ -479,5 +416,6 @@ body {
 .content.contact.insta, .content.contact.git{
   transform-origin: 80% 50%;
   animation: wiggle 1s infinite;
+  width: 22vw;
 }
 

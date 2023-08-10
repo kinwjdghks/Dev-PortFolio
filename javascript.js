@@ -85,23 +85,19 @@ const worksInfo = [
   {
     title: "Album Cover",
     sub: "Photoshop",
-    text: "2022.1.7.</br></br> 왜 포토샵 작업들이 들어가있는지 궁금하다면 그것은 프로젝트를 넣을래야 한게 없어서 넣을게 없기 때문이다.",
-  },
+    },
   {
     title: "Freshman Guide",
     sub: "Photoshop",
-    text: "2020.8.10.</br></br> 2학년때 제작한 프레시맨 가이드 홍보 포스터. 봄 버전과 가을 버전 두 가지가 있다.",
-  },
+    },
   {
     title: "French Dispatch",
     sub: "React js",
-    text: "2023.7.2.~</br></br> 성균관대학교 1PX과 현재 속한 개발동아리 COMIT과의 협업 전시 프로젝트. 영화 '프렌치 디스패치'에 대한 인터랙티브 포스터이다.",
-  },
+    },
   {
     title: "Jungsinsa",
     sub: "Java",
-    text: "2023.6.11.</br></br> JAVA수업 기말 프로젝트로 제출한 무신사 오마주 쇼핑몰. JFrame이 쓰레기라는 걸 몸소 느낄수 있다.",
-  },
+    },
 ];
 //텍스트 삽입
 for (var i = 0; i < 4; i++) {
@@ -111,35 +107,25 @@ for (var i = 0; i < 4; i++) {
     worksInfo[i].sub;
 }
 
-const textboxOrder = [2, 3, 0, 1];
 for (var i = 0; i < 4; i++) {
   const element = document.getElementsByClassName("block works")[i]; //커서가 블럭에 올라가면
   const image = document.getElementsByClassName("img works")[i]; //이미지를 반투명하게
   const description = document.getElementsByClassName(
     "works description-container"
   )[i]; //설명박스를 보이게
-  const textcontainer = document.getElementsByClassName(
-    "works textbox-container"
-  )[textboxOrder[i]];
-  const textbox =
-    document.getElementsByClassName("works textbox")[textboxOrder[i]];
-
-  const textcontent = worksInfo[i].text;
+  
 
   element.addEventListener("mouseenter", () => {
     image.style.opacity = 0.4;
     description.style.opacity = 1;
-    textcontainer.classList.remove("disappear");
-    textcontainer.classList.add("appear");
-    textbox.innerHTML = textcontent;
+   
   });
 
   element.addEventListener("mouseleave", () => {
-    textbox.innerHTML = "";
+    
     image.style.opacity = 1;
     description.style.opacity = 0;
-    textcontainer.classList.remove("appear");
-    textcontainer.classList.add("disappear");
+    
   });
 }
 

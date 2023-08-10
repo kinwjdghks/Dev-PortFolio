@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  <link rel="stylesheet" href="reset.css" />
+  <!-- reset css -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="animation.css" />
-  <link rel="stylesheet" href="font.css"/>
+  <link rel="stylesheet" href="font.css" />
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,11 +14,6 @@
   </head>
   <body>
     <header class="topbar" id="topbar">
-      <button class="nav-toggle" id="nav-toggle">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <div id="progress-circle"></div>
       <nav>
         <ul>
@@ -29,19 +26,24 @@
     </header>
 
     <div class="pages" id="page1">
+      <div class="container-namediv">
+        <div class="namediv_content">
+          <div class="divtag_frontend_align">
+            <div class="divtag_frontend">&lt;frontend&gt;</div>
+          </div>
+          <div class="textbox_name_align">
+            <div class="textbox_name"></div>
+          </div>
+          <div class="divtag_developer_align">
+            <div class="divtag_developer">&lt;/developer&gt;</div>
+          </div>
+        </div>
+      </div>
       <div class="container-sidebar left">
         <div class="container-text univ">
           <div class="emptytag open">&lt;&nbsp;&gt;</div>
           <p>SKKU MTH & SW</p>
           <div class="emptytag close">&lt;/&gt;</div>
-        </div>
-
-      </div>
-      <div class="container-namediv">
-        <div class="namediv_content">
-          <div class="divtag_frontend">&lt;frontend&gt;</div>
-          <div class="textbox_name"></div>
-          <div class="divtag_developer">&lt;/developer&gt;</div>
         </div>
       </div>
       <div class="container-sidebar right">
@@ -63,29 +65,8 @@
           </div>
           <img class="img works paulkim" src="Images/paulkim.jpeg" />
         </div>
-        <div class="works textbox-reserve frenchdispatch">
-          <div class="works textbox-container">
-            <div class="works textbox frenchdispatch"></div>
-          </div>
-        </div>
 
-        <div class="block works freshman">
-          <div class="works description-container freshman">
-            <p class="works description title freshman"></p>
-            <p class="works description sub freshman"></p>
-          </div>
-          <img class="img works freshman" src="Images/freshman.jpeg" />
-        </div>
-        <div class="works textbox-reserve jungsinsa">
-          <div class="works textbox-container">
-            <div class="works textbox jungsinsa"></div>
-          </div>
-        </div>
-        <div class="works textbox-reserve paulkim">
-          <div class="works textbox-container">
-            <div class="works textbox paulkim"></div>
-          </div>
-        </div>
+        
         <div class="block works frenchdispatch">
           <div class="works description-container frenchdispatch">
             <p class="works description title frenchdispatch"></p>
@@ -93,10 +74,13 @@
           </div>
           <img class="img works frenchdispatch" src="Images/French.png" />
         </div>
-        <div class="works textbox-reserve freshman">
-          <div class="works textbox-container">
-            <div class="works textbox freshman"></div>
+        
+        <div class="block works freshman">
+          <div class="works description-container freshman">
+            <p class="works description title freshman"></p>
+            <p class="works description sub freshman"></p>
           </div>
+          <img class="img works freshman" src="Images/freshman.jpeg" />
         </div>
         <div class="block works jungsinsa">
           <div class="works description-container jungsinsa">
@@ -107,20 +91,22 @@
         </div>
       </div>
     </div>
+
+    
     <div class="pages" id="page3">
-      <div class="title-stacks">STACKS</div>
-      <div class="stacks-container">
+       <div class="stacks-container">
+        <div class="title-stacks">STACKS</div>
         <div class="imgcontainer-reserve c">
-        <div class="imgcontainer-reserve_push c">
+          <div class="imgcontainer-reserve_push c">
             <div class="imgcontainer_zoom c">
-            <div class="imgcontainer stacks c">
+              <div class="imgcontainer stacks c">
                 <img class="img stacks c" src="Images/c++.png" alt="c++" />
               </div>
             </div>
           </div>
         </div>
         <div class="imgcontainer-reserve html">
-        <div class="imgcontainer-reserve_push html">
+          <div class="imgcontainer-reserve_push html">
             <div class="imgcontainer_zoom html">
               <div class="imgcontainer stacks html">
                 <img class="img stacks html" src="Images/html.png" alt="html" />
@@ -129,7 +115,7 @@
           </div>
         </div>
         <div class="imgcontainer-reserve css">
-        <div class="imgcontainer-reserve_push css">
+          <div class="imgcontainer-reserve_push css">
             <div class="imgcontainer_zoom css">
               <div class="imgcontainer stacks css">
                 <img class="img stacks css" src="Images/css.jpg" alt="css" />
@@ -138,7 +124,7 @@
           </div>
         </div>
         <div class="imgcontainer-reserve java">
-            <div class="imgcontainer-reserve_push java">
+          <div class="imgcontainer-reserve_push java">
             <div class="imgcontainer_zoom java">
               <div class="imgcontainer stacks java">
                 <img class="img stacks java" src="Images/java.png" alt="java" />
@@ -147,7 +133,7 @@
           </div>
         </div>
         <div class="imgcontainer-reserve react">
-            <div class="imgcontainer-reserve_push react">
+          <div class="imgcontainer-reserve_push react">
             <div class="imgcontainer_zoom react">
               <div class="imgcontainer stacks react">
                 <img
@@ -160,7 +146,7 @@
           </div>
         </div>
         <div class="imgcontainer-reserve ps">
-            <div class="imgcontainer-reserve_push ps">
+          <div class="imgcontainer-reserve_push ps">
             <div class="imgcontainer_zoom ps">
               <div class="imgcontainer stacks ps">
                 <img class="img stacks ps" src="Images/ps.jpg" alt="ps" />
@@ -168,27 +154,27 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
 
     <div class="pages" id="page4">
       <div class="container_phone">
-      <span class="phone_string"></span>
-      <div class="imgcontainer phone">
-        <img src="Images/phone_enabled.svg" />
-      </div>
+        <span class="phone_string"></span>
+        <div class="imgcontainer phone">
+          <img src="Images/phone_enabled.svg" />
+        </div>
       </div>
       <div class="contacts-container">
         <div class="block contact hp">
-          <div class="imgcontainer contact hp">
+          <!-- <div class="imgcontainer contact hp">
             <img class="img contact hp" src="Images/cellphone.png" />
-          </div>
+          </div> -->
           <p class="content contact hp">010-9025-8656</p>
         </div>
         <div class="block contact email">
-          <div class="imgcontainer contact email">
+          <!-- <div class="imgcontainer contact email">
             <img class="img contact email" src="Images/email.png" />
-          </div>
+          </div> -->
           <p class="content contact email">kinwjdghks@naver.com</p>
         </div>
         <div class="block contact insta">
@@ -196,17 +182,30 @@
             <img class="img contact insta" src="Images/insta.jpg" />
           </div>
           <p class="content contact insta">
-            <a class="link insta" href="https://instagram.com/jhwan_j?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">@jhwan_j</a></p>
+            <a
+              class="link insta"
+              href="https://instagram.com/jhwan_j?igshid=OGQ5ZDc2ODk2ZA=="
+              target="_blank"
+              >@jhwan_j</a
+            >
+          </p>
         </div>
         <div class="block contact git">
           <div class="imgcontainer contact git">
             <img class="img contact git" src="Images/git.jpg" />
           </div>
           <p class="content contact git">
-            <a class = "link git" href="https://github.com/kinwjdghks" target="_blank">@kinwjdghks</a></p>
+            <a
+              class="link git"
+              href="https://github.com/kinwjdghks"
+              target="_blank"
+              >@kinwjdghks</a
+            >
+          </p>
         </div>
       </div>
     </div>
+  
     <script src="./javascript.js"></script>
   </body>
 </html>
